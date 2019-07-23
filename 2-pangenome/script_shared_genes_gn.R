@@ -1,9 +1,3 @@
-###########################################
-# Eugenio Mangas / Antonio J. Pérez, 2019 #
-# No. genes in pangenome (distributions)  #
-# used strains                            #
-###########################################
-
 library(magrittr)
 library(ggplot2)
 library(dplyr)
@@ -11,8 +5,10 @@ library(RColorBrewer)
 library(ggrepel)
 library(ggpubr)
 
+setwd("/home/ajperez/Dropbox/aba/pangenome")
+
 # Palette
-c10 <- c("red","darkorange","darkturquoise","green","darkred","grey",
+c10 <- c("red","green","darkorange","darkturquoise","darkred","grey",
          "magenta","darkgreen","blue","yellow3")
 s4 <- c(1,2,4,3)
 
