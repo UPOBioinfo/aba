@@ -26,15 +26,15 @@ phylo<- ggtree(tree,layout = 'circular', branch.length='none', size= 0.2) + geom
 phylo<- phylo + geom_tiplab(size=0.1, aes(angle=angle))
 
 
-q1 <- c("Blood","Catheter","Inert surface","Osteoarticular","Non-human Host",
-        "Other_source","Perianal","Respiratory", "Skin and soft tissue infection", "Urinary and renal fluid", "GROUP_1","GROUP_2",
-        "A.baumannii","ACB","OTHER")
-#"Non-human host"
+q1 <- c("Blood","Bone/joints", "Catheters","Inert surfaces","Non-human Hosts",
+        "Others","Perianal","Respiratory airways", "Skin and soft tissues", "Urinary tract", "Group 1","Group 2",
+        "A.baumannii","ACB complex","Other")
+
 #####Se añaden los colores para cada atributo
 
-c1 <- c("red","darkorange","darkturquoise","green","darkred","grey",
+c1 <- c("red","green","darkorange","darkturquoise","darkred","grey",
         "magenta","darkgreen","blue","yellow3", "orange", "purple","dodgerblue4","lightblue3","gray86")
-#"yellowgreen"
+        
 #####Se asocian ambas
 
 names(c1) <- q1
