@@ -1,6 +1,6 @@
 # ABA Project: Genomics for personalized medicine against *Acinetobacter baumannii*
 
-These are both the computational tools and protocol used to annotate and analyse the pan genome of Acinetobacter baumannii. In this project were used 2,467 assembled genomes of this bacterium, but this protocol is potentially useful to study any other prokaryotic species.
+These are both the computational tools and protocol used to annotate and analyse the pan genome of Acinetobacter baumannii. In this project 2,467 assembled genomes of this bacterium were used , but this protocol is potentially useful to study any other prokaryotic species.
 
 ## Genome annotation
 FASTA files for all strains are downloaded from NCBI Genome database. Files were used by [Roary](https://sanger-pathogens.github.io/Roary/)  for calculating the core and pan genome, with both -s and -o parameters, and 90% as the identity threshold, which creates a pan_genome file. The reference protein-coding sequences from this file are functionally annotated using [Sma3s v2](http://www.bioinfocabd.upo.es/sma3s/) and the taxonomic division bacteria of UniProt Knowledgebase as annotation source.
