@@ -54,7 +54,7 @@ You can also search from the Sma3s annotation or even from the Prokka annotation
 Finally, you can search cas genes in a highly precise mode with RPS-BLAST and PSSM matrices from the CDD database:
 >ls *.smp > cdd_crispr.pn
 >makeprofiledb -in cdd_crispr.pn -title cdd_crispr -dbtype 'rps'
->rpsblast+ -query pan_gn.faa -db cdd_crispr.pn -evalue 1e-05 -outfmt '6 qseqid sseqid pident qcovs qcovhsp length qle>n slen evalue qstart qend sstart send' > pan_gn.rpsblast.tsv
+>rpsblast+ -query pan_gn.faa -db cdd_crispr.pn -evalue 1e-05 -outfmt '6 qseqid sseqid pident qcovs qcovhsp length qlen slen evalue qstart qend sstart send' > pan_gn.rpsblast.tsv
 
 Once you collect all cas genes, you can find CRISPR/Cas cluster in the genomes, using Prokka annotations and ***discoverCRISPRorderInGenomes.pl***.
 
