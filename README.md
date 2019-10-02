@@ -52,38 +52,38 @@ You can also search from the Sma3s annotation or even from the Prokka annotation
 >./searchCRISPRfromGFFProkka.pl > ab_crisprGenes_repeats_abs.tsv
 
 Finally, you can search cas genes in a highly precise mode with RPS-BLAST and PSSM matrices from the CDD database:
->ls *.smp > cdd_crispr.pn
->makeprofiledb -in cdd_crispr.pn -title cdd_crispr -dbtype 'rps'
->rpsblast+ -query pan_gn.faa -db cdd_crispr.pn -evalue 1e-05 -outfmt '6 qseqid sseqid pident qcovs qcovhsp length qlen slen evalue qstart qend sstart send' > pan_gn.rpsblast.tsv
+>ls *.smp > cdd_crispr.pn  
+>makeprofiledb -in cdd_crispr.pn -title cdd_crispr -dbtype 'rps'  
+>rpsblast+ -query pan_gn.faa -db cdd_crispr.pn -evalue 1e-05 -outfmt '6 qseqid sseqid pident qcovs qcovhsp length qlen slen evalue qstart qend sstart send' > pan_gn.rpsblast.tsv  
 
 Once you collect all cas genes, you can find CRISPR/Cas cluster in the genomes, using Prokka annotations and ***discoverCRISPRorderInGenomes.pl***.
 
 With all the results, you can create summary tables which can be used to analyse the plasmid distributions, in addition to the CRISPR arrays and cas genes: ***script_plasmids_crispr.R***.
 
 Tables need by the R script can be created by:
-> countPlasmids.pl ab_plasm_matrix_2112_84.tsv crispr_all_strains_v3.ab 0 100 > plasmids_crispr_0_100_v3.tsv
-> countPlasmids.pl ab_plasm_matrix_2112_84.tsv cas9_v3_strains.ab 0 100 > plasmids_crispr_0_100_cas9_v3.tsv
-> countPlasmids.pl ab_plasm_matrix_2112_84.tsv group1.tsv 0 100 > plasmids_group1_0_100_v3.tsv
+> countPlasmids.pl ab_plasm_matrix_2112_84.tsv crispr_all_strains_v3.ab 0 100 > plasmids_crispr_0_100_v3.tsv  
+> countPlasmids.pl ab_plasm_matrix_2112_84.tsv cas9_v3_strains.ab 0 100 > plasmids_crispr_0_100_cas9_v3.tsv  
+> countPlasmids.pl ab_plasm_matrix_2112_84.tsv group1.tsv 0 100 > plasmids_group1_0_100_v3.tsv  
 
 The variant ***countPlasmids_byplasmids.pl*** can be used to obtains the plasmids linked to each group.
 
 ## Software versions
-Prokka version 1.13
-Sma3s v2
-BLAST 2.2.31+ (RPS-BLAST)
-ssu-align v0.1.1
-Infernal v1.1
-MAFFT v7.271
-trimAL v1.2
-PHYLIP v3.697
-RAxML v8.2.9
-R ggtree library v1.10.5
-pyani v0.2.4
-Roary version 3.11.2
-FastTree 2.1.8
-Phandango
-TopGO R package version 2.30.1
-CRISPRCasFinder 1.4
-psi-CD-HIT
-Mob-Suite toolkit v1.4.9.1
+Prokka version 1.13  
+Sma3s v2  
+BLAST 2.2.31+ (RPS-BLAST)  
+ssu-align v0.1.1  
+Infernal v1.1  
+MAFFT v7.271  
+trimAL v1.2  
+PHYLIP v3.697  
+RAxML v8.2.9  
+R ggtree library v1.10.5  
+pyani v0.2.4  
+Roary version 3.11.2  
+FastTree 2.1.8  
+Phandango  
+TopGO R package version 2.30.1  
+CRISPRCasFinder 1.4  
+psi-CD-HIT  
+Mob-Suite toolkit v1.4.9.1  
 R libraries: cowplot, dendextend, dplyr, ggbeeswarm, ggnewscale, ggplot2, ggpubr, ggrepel, ggtree, magrittr, pheatmap, plotly, RColorBrewer, reshape2, tidyverse, topGO, viridis, viridisLite
