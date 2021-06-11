@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use strict;
-# Create a matrix of gene presence/abscence for R
+# Create a matrix of shared genes by strains for R
 # INPUT1: pan_clusters2_table.tsv from readPangenome.pl
 # INPUT2: list of strains id in txt format
 # OUTPUT1: matrix in tsv format for R scripts 
