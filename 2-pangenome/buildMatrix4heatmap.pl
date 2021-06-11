@@ -50,7 +50,7 @@ close in;
 
 open OUT, ">$OUT_FILE";
 print OUT "#";
-for (sort {$a <=> $b} keys %S) { print "\t$LETTERS$_" }
+for (sort {$a <=> $b} keys %S) { print OUT "\t$LETTERS$_" }
 print OUT "\n";
 
 foreach my $i (sort {$a <=> $b} keys %S) {
