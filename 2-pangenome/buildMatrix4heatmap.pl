@@ -50,11 +50,11 @@ close in;
 
 open OUT, ">$OUT_FILE";
 print OUT "#";
-for (sort {$a <=> $b} keys %S) { print "\tLETTERS$_" }
+for (sort {$a <=> $b} keys %S) { print "\t$LETTERS$_" }
 print OUT "\n";
 
 foreach my $i (sort {$a <=> $b} keys %S) {
-  print OUT "LETTERS$i";
+  print OUT "$LETTERS$i";
   foreach my $j (sort {$a <=> $b} keys %S) {
     $par[$i][$j] = 0 if !$par[$i][$j];
     print OUT "\t$par[$i][$j]";
