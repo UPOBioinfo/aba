@@ -1,4 +1,5 @@
 # Check both number of genes and shared genes by strain
+# Change working directory, pan_clusters2_table.matrix and metadata.tsv
 # AJPerez, 2019 (updated June 2021)
 library(magrittr)
 library(ggplot2)
@@ -7,7 +8,7 @@ library(RColorBrewer)
 library(ggrepel)
 library(ggpubr)
 
-setwd("/home/folder")
+setwd("./")
 
 # Palette
 c10 <- c("red","green","darkorange","darkturquoise","darkred","grey",
@@ -22,7 +23,7 @@ rownames(pgenes) <- rnames                  # assign row names
 colnames(pgenes) <- rnames
 
 # Metadata
-mdata <- read.csv("metadata1.tsv", sep="\t")
+mdata <- read.csv("metadata.tsv", sep="\t")
 isolation <- mdata$"isolation"
 isolation2 <- as.numeric(as.factor(isolation))
 legend.cols <- as.numeric(as.factor(levels(isolation)))
