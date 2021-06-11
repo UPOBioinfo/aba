@@ -1,5 +1,6 @@
 # Check both number of genes and shared genes by strain
 # Change working directory, pan_clusters2_table.matrix and metadata.tsv
+#  The latter file should have 5 columns, though the 4 latter are empty: Number, isolation, whyDeleted, COLLECTION_DATE, Proteins_Prokka
 # AJPerez, 2019 (updated June 2021)
 library(magrittr)
 library(ggplot2)
